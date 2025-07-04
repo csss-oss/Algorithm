@@ -6,7 +6,7 @@
 char* solution(int n) {
     // 리턴할 값은 메모리를 동적 할당해주세요.
     
-    char* answer = (char*)malloc(n*strlen("수"));
+    char* answer = (char*)malloc(n*strlen("수")+1);// 한글의 크기는 3바이트이므로 strlen을써서 그 크기만큼 동적할당+1은 널문자 처리
     strcpy(answer,"");//쓰레기값 제거
     for(int i=0; i<n; i++)
     {
